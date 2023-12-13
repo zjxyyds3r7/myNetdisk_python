@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>下载页面</title>
+        <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+</head>
+<body>
+    <h1 style="text-align: center">周景鑫的网盘系统</h1>
+    {% for l in link_list %}
+        <h4>{{ l.name }}</h4>
+        <a href="/api/download/{{ l.name }}">点我下载</a>
+        <h4>-------------------------</h4>
+    {% endfor %}
+    <a href="index">返回到上传页面</a>
+</body>
+</html>
